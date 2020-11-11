@@ -1,0 +1,27 @@
+.Task {
+
+  &--completed {
+
+    .Task__delete-icon {
+      opacity: 0.5;
+      cursor: default;
+      text-decoration: none
+      ;
+      &:hover {
+        color: black;
+      }
+    }
+  }
+
+  &__delete-icon {
+    font-size: 1.3rem;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  &__editor-wrapper {
+    // font-weight: 600;
+  }
+}

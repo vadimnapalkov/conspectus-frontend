@@ -1,0 +1,15 @@
+.text-field {
+  position: relative;
+
+  .form-control {
+    &, &:focus {
+      color: #00113B;
+    }
+  }
+
+  .text-field-label {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 3px;
+  }
+}

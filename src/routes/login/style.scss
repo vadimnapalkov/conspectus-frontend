@@ -1,0 +1,40 @@
+.login {
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__signin-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: 440px;
+    box-shadow: -6px 0px 14px rgba(121, 123, 137, 0.1), 0px 0px 4px rgba(0, 0, 0, 0.15), 0px 0px 4px rgba(0, 0, 0, 0.14);
+    border-radius: 2px;
+    background: #fff;
+
+    @media screen and (max-width: 576px) {
+      max-width: none;
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    &__title {
+      text-align: center;
+    }
+  }
+
+  &__signin-form {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

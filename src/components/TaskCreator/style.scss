@@ -1,0 +1,9 @@
+.TaskCreator {
+
+  border-bottom: 1px solid black;
+  width: 50%;
+
+  @media screen and (max-width: 756px) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,14 @@
+.TasksList {
+  overflow-y: auto;
+  max-height: 100%;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #D5D8DF;
+    border-radius: 40px;
+  }
+}
