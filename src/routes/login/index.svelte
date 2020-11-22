@@ -9,6 +9,7 @@
   let login = ''
   let password = ''
   let errorMessage = ''
+  let isLoading = false
 
   const handleLoginChange = e => {
     login = e.target.value
@@ -19,7 +20,10 @@
   }
 
   const handleSignIn = async () => {
+    isLoading = true
     const { user: currentUser, error } = await signIn({ login, password })
+
+    isLoading = false
 
     errorMessage = error
 
@@ -64,8 +68,16 @@
           placeholder="Enter your password"
           onChange={handlePasswordChange}
         />
-        <button type="button" class="btn btn-primary w-100 mt-4" on:click="{handleSignIn}">
-          Sign In
+        <button type="button" class="btn btn-primary w-100 mt-4" on:click="{handleSignIn}" disabled={isLoading}>
+          {#if isLoading}
+            <div class="d-flex justify-content-center h-100 align-items-center">
+              <div class="spinner-border text-success" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+          {:else}
+            Sign In
+          {/if}
         </button>
       </div>
   </div>
