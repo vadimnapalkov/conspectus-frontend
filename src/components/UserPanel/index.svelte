@@ -1,8 +1,8 @@
 <script>
   import { onDestroy } from 'svelte';
-  import { user } from 'stores/user';
-  import { logoutUser } from 'api/user';
   import * as app from '@sapper/app';
+  import { user } from 'Stores/user';
+  import { logoutUser } from 'Api/user';
 
   let currentUser;
 

@@ -1,8 +1,8 @@
 <script>
   import { fromJSON, toJSON, createRichTextEditor, richTextSchema } from 'prosemirror-svelte/state';
   import { richTextPlugins } from 'prosemirror-svelte/helpers';
-  import { updateTask } from 'stores/tasks'
   import debounce from 'lodash/debounce';
+  import { updateTask } from 'Stores/tasks'
 
   import TextEditor from '../../../TextEditor'
 

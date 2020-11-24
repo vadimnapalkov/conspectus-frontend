@@ -1,9 +1,8 @@
 <script>
-  import { onDestroy } from 'svelte';
-  import { user } from 'stores/user';
-  import { authUser } from 'api/user';
-  import { onMount } from 'svelte';
+  import { onDestroy , onMount } from 'svelte';
   import * as sapper from '@sapper/app';
+  import { user } from 'Stores/user';
+  import { authUser } from 'Api/user';
 
 	export let segment;
 

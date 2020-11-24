@@ -2,8 +2,9 @@
   import { onDestroy } from 'svelte';
   import dayjs from 'dayjs'
   import Datepicker from 'svelte-calendar'
-  import { settings, updateSettings } from 'stores/settings';
+  import { settings, updateSettings } from 'Stores/settings';
 
+  let isToday;
   let currentSettings;
   let dateChosen;
   let formattedSelected;

@@ -1,7 +1,8 @@
 <script>
-  import TextEditor from '../TextEditor'
-  import { addTask } from 'stores/tasks';
   import { createRichTextEditor, toJSON } from 'prosemirror-svelte/state';
+  import { addTask } from 'Stores/tasks';
+
+  import TextEditor from '../TextEditor';
 
   // create the initial editor state
   let editorState = createRichTextEditor('');

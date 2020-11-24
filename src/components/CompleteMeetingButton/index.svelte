@@ -1,9 +1,11 @@
 <script>
-  import dayjs from 'dayjs';
-  import { settings } from 'stores/settings';
-  import { removeCompletedTasks } from 'stores/tasks';
   import { onDestroy } from 'svelte';
-  import { completeMeeting} from 'api/settings'
+  import dayjs from 'dayjs';
+  import { settings } from 'Stores/settings';
+  import { removeCompletedTasks } from 'Stores/tasks';
+  import { completeMeeting} from 'Api/settings'
+
+  let isToday;
 
   let currentSettings;
 
@@ -17,7 +19,7 @@
 
   const handleCompleteMeeting = async () => {
     if (window.confirm('Current meeting will be completed. Are you sure?')) {
-      isLoading = true;
+        isLoading = true;
       const data = await completeMeeting().finally(() => {
         isLoading = false;
       });

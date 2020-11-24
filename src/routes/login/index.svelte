@@ -1,10 +1,11 @@
 <script>
-  import matrixBackground from 'images/matrix_background.jpg';
-  import { signIn } from 'api/user';
-  import { user } from 'stores/user';
+  import { signIn } from 'Api/user';
+  import { user } from 'Stores/user';
   import * as app from '@sapper/app';
 
+  import matrixBackground from './matrix_background.jpg';
   import TextField from '../../components/TextField';
+  import Spinner from '../../components/Spinner'
 
   let login = ''
   let password = ''
@@ -21,9 +22,9 @@
 
   const handleSignIn = async () => {
     isLoading = true
-    const { user: currentUser, error } = await signIn({ login, password })
-
-    isLoading = false
+    const { user: currentUser, error } = await signIn({ login, password }).finally(() => {
+      isLoading = false
+    })
 
     errorMessage = error
 
@@ -70,11 +71,7 @@
         />
         <button type="button" class="btn btn-primary w-100 mt-4" on:click="{handleSignIn}" disabled={isLoading}>
           {#if isLoading}
-            <div class="d-flex justify-content-center h-100 align-items-center">
-              <div class="spinner-border text-success" role="status">
-                <span class="sr-only">Loading...</span>
-              </div>
-            </div>
+            <Spinner />
           {:else}
             Sign In
           {/if}

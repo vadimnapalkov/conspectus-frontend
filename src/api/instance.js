@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { backDomain } from '../../../config/config.json';
+import { backDomain } from '../../config/config';
 
 export const instance = axios.create({
   baseURL: `${backDomain}/api`,

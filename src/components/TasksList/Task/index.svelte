@@ -1,9 +1,9 @@
 <script>
   import { fromJSON, toJSON, richTextSchema } from 'prosemirror-svelte/state';
   import { richTextPlugins } from 'prosemirror-svelte/helpers';
-  import { removeTask, updateTask, nestTask, removeTaskNesting } from 'stores/tasks'
   import debounce from 'lodash/debounce';
   import cn from 'classnames';
+  import { removeTask, updateTask, nestTask, removeTaskNesting } from 'Stores/tasks'
 
   import Comment from './Comment';
   import Checkbox from './Checkbox';

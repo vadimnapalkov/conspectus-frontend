@@ -1,6 +1,7 @@
 <script>
   import { onDestroy } from 'svelte';
-  import { tasks } from 'stores/tasks';
+  import { tasks } from 'Stores/tasks';
+
   import Task from './Task';
 
   let currentTasks = []

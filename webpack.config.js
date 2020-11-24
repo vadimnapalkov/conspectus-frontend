@@ -1,14 +1,16 @@
+const path = require('path');
+
 const webpack = require('webpack');
 const WebpackModules = require('webpack-modules');
-const path = require('path');
 const config = require('sapper/config/webpack.js');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const pkg = require('./package.json');
+
 const mode = process.env.NODE_ENV || 'production';
 const dev = mode === 'development';
 
-const alias = { svelte: path.resolve('node_modules', 'svelte') };
+const alias = { svelte: path.resolve('node_modules', 'svelte'), Api: path.resolve('./src/api/'), Stores: path.resolve('./src/stores') };
 const extensions = ['.mjs', '.js', '.json', '.svelte', '.html'];
 const mainFields = ['svelte', 'module', 'browser', 'main'];
 const fileLoaderRule = {

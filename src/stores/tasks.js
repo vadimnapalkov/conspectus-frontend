@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
-import * as api from '../api/task';
 import * as UUID from 'uuid';
+import * as api from 'Api/task';
 
 export const tasks = writable([]);
 

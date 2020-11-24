@@ -1,5 +1,4 @@
 <script>
-  // import the core component
  import ProsemirrorEditor from 'prosemirror-svelte';
  import { toHTML } from 'prosemirror-svelte/state';
 
