@@ -57,13 +57,6 @@ There are three simple rules for naming the files that define your routes:
 * Files and directories with a leading underscore do *not* create routes. This allows you to colocate helper modules and components with the routes that depend on them — for example you could have a file called `src/routes/_helpers/datetime.js` and it would *not* create a `/_helpers/datetime` route.
 
 
-#### src/node_modules/images
-
-Images added to `src/node_modules/images` can be imported into your code using `import 'images/<filename>'`. They will be given a dynamically generated filename containing a hash, allowing for efficient caching and serving the images on a CDN.
-
-See [`index.svelte`](src/routes/index.svelte) for an example.
-
-
 #### src/node_modules/@sapper
 
 This directory is managed by Sapper and generated when building. It contains all the code you import from `@sapper` modules.
